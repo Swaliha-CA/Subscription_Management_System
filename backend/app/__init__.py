@@ -10,7 +10,17 @@ def create_app() -> Flask:
     app = Flask(__name__)
     app.config["SECRET_KEY"] = config.SECRET_KEY
 
-    CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+    CORS(
+    app,
+    resources={
+        r"/api/*": {
+            "origins": [
+                config.FRONTEND_URL,
+                "http://localhost:5173",
+            ]
+        }
+    },
+)
 
     # Initialise DB (create tables if they don't exist)
     init_db()
