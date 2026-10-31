@@ -7,3 +7,6 @@ python-dotenv
 bcrypt
 gunicorn
 psycopg[binary]
+passlib[bcrypt]
+Flask-Mail
+reportlab
