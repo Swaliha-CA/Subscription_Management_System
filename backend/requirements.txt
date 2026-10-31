@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+SQLAlchemy
+PyJWT
+APScheduler
+python-dotenv
+bcrypt
+gunicorn
+psycopg[binary]
