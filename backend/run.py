@@ -15,3 +15,6 @@ if __name__ == "__main__":
     start_scheduler()
     atexit.register(stop_scheduler)
     app.run(host="0.0.0.0", port=5000, debug=False)
+else:
+    start_scheduler()
+    atexit.register(stop_scheduler)
